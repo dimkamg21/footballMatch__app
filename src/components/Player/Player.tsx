@@ -7,8 +7,8 @@ interface PlayerProps {
 }
 
 const Player: React.FC<PlayerProps> = ({ player }) => {
-  const playerGridRow = player.grid.split(':')[1];
-  const playerGridColumn = player.grid.split(':')[0];
+  const playerGridRow = player.grid?.split(':')[1];
+  const playerGridColumn = player.grid?.split(':')[0];
 
   let playerGrid = {
     gridColumn: `${Number(playerGridColumn)} / ${Number(playerGridColumn) + 1}`,
