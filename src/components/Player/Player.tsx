@@ -15,7 +15,6 @@ const Player: React.FC<PlayerProps> = ({ player }) => {
     gridRow: `${Number(playerGridRow)} / ${Number(playerGridRow) + 1}`,
     alignSelf: 'center',
     justifySelf: 'center',
-    transform: 'rotate(-90deg)'
   };
   
   if (playerGridRow === '1' && playerGridColumn === '1') {
