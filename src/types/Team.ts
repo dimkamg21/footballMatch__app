@@ -6,7 +6,7 @@ export interface ITeam {
     name: string;
     logo: string;
     colors: string[] | null;
-  }
+  };
   coach: {
     id: number;
     name: string;

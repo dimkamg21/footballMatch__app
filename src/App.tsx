@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import { fetchTeam } from "./helpers/fetchTeam";
-import { IMatchData } from "./types/MatchData";
 import TeamList from "./components/TeamList/TeamList";
 import Loader from "./components/Loader/Loader";
 import Button from "./components/Button/Button";
 import Table from "./components/Table/Table";
 import logo from './assets/premierLogo.png';
+import { IMatchData } from "./types/MatchData";
+import { fetchTeam } from "./helpers/fetchTeam";
 import "./App.scss";
 
 function App() {
@@ -17,12 +17,14 @@ function App() {
 
   function handleMatchChange(newMatchId: number) {
     if (newMatchId !== matchId) {
-      setIsLoading(true);
+      // setIsLoading(true);
       setMatchId(newMatchId);
     }
   }
 
   useEffect(() => {
+    setIsLoading(true); 
+
     fetchTeam(matchId)
       .then((matchData) => {
         setCurrentMatch(matchData);
