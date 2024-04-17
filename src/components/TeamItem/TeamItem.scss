@@ -1,0 +1,19 @@
+@import '../../styles/utils';
+
+.teamItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: calc(#{$min-pitch-width} / 2);
+  min-height: $min-pitch-heigth;
+}
+
+.left-half {
+  padding-left: 25px;
+}
+
+.right-half {
+  direction: rtl;
+  padding-right: 10px;
+}
+

@@ -1,0 +1,114 @@
+@import "../../styles/utils";
+
+.ground {
+  width: 90%;
+  min-width: $min-pitch-width;
+  height: 25vw;
+  min-height: $min-pitch-heigth;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.border {
+  background: $gray-secondary;
+  position: absolute;
+  z-index: 2;
+}
+
+.outline.border {
+  border: 1px solid $gray-secondary;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.center {
+  &-line {
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: calc(50% - 1px/2);
+  }
+
+  &-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 120px;
+    border: 1px solid  $gray-secondary;
+    background: none;
+    top: calc(50% - 120px/2);
+    left: calc(50% - 120px/2);
+  }
+}
+
+.box {
+  top: 25%;
+  width: 16%;
+  height: 50%;
+  background: transparent;
+  border: 1px solid $gray-secondary;
+
+  &.left {
+    left: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.small {
+    top: 36%;
+    width: 8%;
+    height: 28%;
+  }
+}
+
+.box-d {
+  top: 35%;
+  width: 15.5%;
+  height: 30%;
+  background: transparent;
+  border: 1px solid $gray-secondary;
+
+  &.left {
+    left: 5%;
+    border-left: none;
+    border-bottom-right-radius: 1000px;
+    border-top-right-radius: 1000px;
+    clip-path: inset(0 0 0 70%);
+  }
+
+  &.right {
+    right: 5%;
+    border-right: none;
+    border-bottom-left-radius: 1000px;
+    border-top-left-radius: 1000px;
+    clip-path: inset(0 70% 0 0);
+  }
+}
+
+.spot {
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  top: calc(50% - 2px); // 4px/2 = 2px
+
+  &.left {
+    left: 11%;
+  }
+
+  &.right {
+    right: 11%;
+  }
+
+  &.center {
+    width: 8px;
+    height: 8px;
+    left: calc(50% - 4px);
+  }
+}
+.grass {
+  width: 100%;
+  height: 100%;
+  background-color: $gray-primary;
+}

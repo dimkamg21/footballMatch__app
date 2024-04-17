@@ -1,0 +1,40 @@
+.player {
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background-color: #c6c6c6;
+  background-image: url(../../assets/footballerIcon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &-image {
+    height: 80%;
+    width: 100%;
+
+    object-fit: contain;
+  }
+
+  &__hover-name {
+    display: none;
+    position: absolute;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 12px;
+    background-color: white;
+    white-space: nowrap;
+    padding: 2px 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+      display: inline;
+      opacity: 1;
+    }
+  }
+
+  &:hover &__hover-name {
+    display: inline;
+  }
+}

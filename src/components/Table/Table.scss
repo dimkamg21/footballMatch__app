@@ -1,0 +1,68 @@
+@import '../../styles/utils';
+
+.table {
+  width: 100%;
+  background-color: $gray-primary;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 1px solid $gray-secondary;
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__vs {
+    color: white;
+    font-size: 70px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+  }
+
+  &__team {
+    width: 150px; 
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: #181616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 20px -5px black;
+  }
+
+  &__logo-container {
+    width: 80%; 
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: $gray-primary;
+    box-shadow: 0px 0px 20px -5px $gray-primary inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &__name {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 30px;
+
+    width: 200px; 
+    overflow-wrap: break-word; 
+    text-align: center;
+    height: 30px;
+  }
+}

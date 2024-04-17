@@ -1,0 +1,13 @@
+.button {
+  padding: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #1D1D1D;
+  border: none;
+  color: greenyellow;
+  cursor: pointer;
+}
+
+.button-active {
+  border-bottom: 3px solid greenyellow;
+}
