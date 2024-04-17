@@ -12,23 +12,23 @@ function App() {
   const [currentMatch, setCurrentMatch] = useState<IMatchData | null>(null);
   const [matchId, setMatchId] = useState(1);
   const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   const matches = [1, 2, 3];
 
   function handleMatchChange(newMatchId: number) {
-    if (newMatchId !== matchId) {
-      // setIsLoading(true);
-      setMatchId(newMatchId);
-    }
+    setMatchId(newMatchId);
   }
 
   useEffect(() => {
     setIsLoading(true); 
+    setIsError(false)
 
     fetchTeam(matchId)
       .then((matchData) => {
         setCurrentMatch(matchData);
       })
+      .catch(() => setIsError(true))
       .finally(() => setIsLoading(false));
   }, [matchId]);
 
@@ -40,7 +40,7 @@ function App() {
           <img className="header__img"src={logo} />
         </div>
 
-        {currentMatch && (
+        {currentMatch && !isError  && (
           <>
            <Table match={currentMatch.response} isLoading={isLoading} />
 
@@ -59,11 +59,14 @@ function App() {
        
       </header>
 
-      {currentMatch && !isLoading && (
+      {(currentMatch && !isLoading && !isError) && (
         <TeamList matchInfo={currentMatch?.response} />
       )}
 
       {isLoading && <Loader />}
+
+      {(isError && !isLoading) && ( <h1>Cant load data right now</h1>
+      )}
     </div>
   );
 }
