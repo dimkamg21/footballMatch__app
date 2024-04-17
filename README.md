@@ -4,7 +4,7 @@ An app using React.js presents football matches from api
 
 ## Links:
 
-- [DEMO](coming soon)
+- [DEMO](https://football-match-lcaz96l3b-dmytros-projects-c00dcf5a.vercel.app/)
 
 ## Technologies
 
